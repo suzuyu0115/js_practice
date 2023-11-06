@@ -11,7 +11,13 @@
       const countupButton = document.querySelector('.countup');
       countupButton.addEventListener('click', function () {
         const counter = document.querySelector('.counter');
-        counter.textContent = parseInt(counter.textContent) + 1;
+        const count = parseInt(counter.textContent);
+
+        if (count < 10) {
+          counter.textContent = count + 1;
+        } else {
+          alert('カウントアップできません');
+        }
       });
     </script>
   </body>
